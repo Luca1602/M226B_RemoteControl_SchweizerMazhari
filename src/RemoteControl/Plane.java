@@ -4,9 +4,8 @@ public class Plane implements Movable{
 
 	@Override
 	public boolean start() {
-		return false;
 		// TODO Auto-generated method stub
-		
+		return false;
 	}
 
 	@Override
@@ -16,15 +15,22 @@ public class Plane implements Movable{
 	}
 
 	@Override
-	public void changeDirection(String direction) {
+	public boolean turn(int degrees) {
 		// TODO Auto-generated method stub
-		
+		return false;
 	}
 
 	@Override
-	public int showFuel() {
+	public double fuelRemaining() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	@Override
+	public boolean changeSpeed(double kmperhour) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 
 }
