@@ -1,11 +1,11 @@
 package RemoteControl;
 
 public interface Movable {
-	
-	boolean start ();
+
+	void start ();
 	void stop ();
-	boolean turn (int degrees);
+	void turn (int degrees);
 	double fuelRemaining ();
-	boolean changeSpeed (double kmperhour);
-	
+	void changeSpeed (double kmperhour);
+
 }

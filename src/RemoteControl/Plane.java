@@ -3,21 +3,18 @@ package RemoteControl;
 public class Plane implements Movable{
 
 	@Override
-	public boolean start() {
-		// TODO Auto-generated method stub
-		return false;
+	public void start() {
+		System.out.println("Flugzeug erfolgreich gestartet\n");
 	}
 
 	@Override
 	public void stop() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Lastwagen erfolgreich gestoppt\n");
 	}
 
 	@Override
-	public boolean turn(int degrees) {
-		// TODO Auto-generated method stub
-		return false;
+	public void turn(int degrees) {
+		System.out.println("Lastwagen erfolgreich um " + degrees + " Grad gedreht\n");
 	}
 
 	@Override
@@ -27,9 +24,8 @@ public class Plane implements Movable{
 	}
 
 	@Override
-	public boolean changeSpeed(double kmperhour) {
-		// TODO Auto-generated method stub
-		return false;
+	public void changeSpeed(double kmperhour) {
+		System.out.println("Geschwindigkeit von Lastwagen auf " + kmperhour + " km/h ge�ndert");
 	}
 
 
