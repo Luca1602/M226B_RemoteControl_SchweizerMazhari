@@ -19,6 +19,7 @@ public class Start {
 
         while (running) {
 
+            System.out.println("---Fahrzeugauswahl---");
             System.out.println("[1] - Schiff");
             System.out.println("[2] - Flugzeug");
             System.out.println("[3] - Lastwagen");
@@ -27,17 +28,17 @@ public class Start {
 
             switch(option) {
                 case "1":
-                    System.out.println("Schiff ausgew�hlt\n");
+                    System.out.println("Schiff ausgewählt\n");
                     rc = new RemoteControl(ship);
                     rc.steer();
                     break;
                 case "2":
-                    System.out.println("Flugzeug ausgew�hlt\n");
+                    System.out.println("Flugzeug ausgewählt\n");
                     rc = new RemoteControl(plane);
                     rc.steer();
                     break;
                 case "3":
-                    System.out.println("Lastwagen ausgew�hlt\n");
+                    System.out.println("Lastwagen ausgewählt\n");
                     rc = new RemoteControl(truck);
                     rc.steer();
                     break;
@@ -47,7 +48,8 @@ public class Start {
                     sc.close();
                     break;
                 default:
-                    System.out.println("Bitte w�hlen Sie die option mit der jeweiligen Nummer aus");
+                    System.out.println("Bitte wählen Sie die Option mit der jeweiligen Nummer aus");
+                    break;
             }
         }
     }

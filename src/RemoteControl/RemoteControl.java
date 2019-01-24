@@ -18,11 +18,10 @@ public class RemoteControl {
 
 			System.out.println("[1] Objekt starten");
 			System.out.println("[2] Objekt stoppen");
-			System.out.println("[3] Richtung von Objekt �ndern");
+			System.out.println("[3] Richtung von Objekt ändern");
 			System.out.println("[4] Treibstoffkontrolle");
 			System.out.println("[5] Geschwindigkeitsaenderung");
-			System.out.println("[6] zur�ck zur Fahrzeugauswahl");
-			System.out.println("[0] Programm beenden");
+			System.out.println("[6] zurueck zur Fahrzeugauswahl");
 			String option = sc.nextLine();
 			switch ( option ) {
 				case "1":
@@ -37,10 +36,10 @@ public class RemoteControl {
 					machine.turn(degrees);
 					break;
 				case "4":
-					System.out.println("Treibstoff in %:" + machine.fuelRemaining());
+					System.out.println("Treibstoff in %: " + machine.fuelRemaining());
 					break;
 				case "5":
-					System.out.println("Geschwindigkeit auf wieviele km/h �ndern?");
+					System.out.println("Geschwindigkeit auf wieviele km/h ändern?");
 					double speed = Double.parseDouble(sc.nextLine());
 					machine.changeSpeed(speed);
 					break;
@@ -48,12 +47,8 @@ public class RemoteControl {
 					sc.close();
 					running = false;
 					break;
-				case "0":
-					System.out.println("Programm beendet");
-					running = false;
-					break;
 				default:
-					System.out.println("Bitte w�hlen Sie die Option mit der jeweiligen Nummer aus");
+					System.out.println("Bitte wählen Sie die Option mit der jeweiligen Nummer aus");
 			}
 		}
 	}

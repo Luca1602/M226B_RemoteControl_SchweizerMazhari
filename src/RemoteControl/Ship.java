@@ -2,30 +2,55 @@ package RemoteControl;
 
 public class Ship implements Movable{
 
+	boolean isRunning = false;
+	double fuel = 100.0;
+
 	@Override
 	public void start() {
-		System.out.println("Schiff erfolgreich gestartet\n");
+		if (!isRunning) {
+			System.out.println("Schiff erfolgreich gestartet\n");
+			isRunning = true;
+		}
+		else {
+			System.out.println("Schiff wurde bereits gestartet\n");
+		}
 	}
 
 	@Override
 	public void stop() {
-		System.out.println("Lastwagen erfolgreich gestoppt\n");
+		if (isRunning) {
+			System.out.println("Schiff erfolgreich gestoppt\n");
+			isRunning = false;
+		}
+		else {
+			System.out.println("Schiff wurde noch nicht gestartet\n");
+		}
 	}
 
 	@Override
 	public void turn(int degrees) {
-		System.out.println("Lastwagen erfolgreich um " + degrees + " Grad gedreht\n");
+		if (isRunning) {
+			System.out.println("Schiff erfolgreich um " + degrees + " Grad gedreht\n");
+		}
+		else {
+			System.out.println("Schiff zuerst starten um Richtung zu ändern\n");
+		}
 	}
 
 	@Override
 	public double fuelRemaining() {
-		// TODO Auto-generated method stub
-		return 0;
+		fuel = fuel-10;
+		return fuel;
 	}
 
 	@Override
 	public void changeSpeed(double kmperhour) {
-		System.out.println("Geschwindigkeit von Lastwagen auf " + kmperhour + " km/h ge�ndert");
+		if (isRunning) {
+			System.out.println("Geschwindigkeit von Schiff auf " + kmperhour + " km/h geändert\n");
+		}
+		else {
+			System.out.println("Schiff zuerst starten um Geschwindigkeit zu ändern\n");
+		}
 	}
 
 }
