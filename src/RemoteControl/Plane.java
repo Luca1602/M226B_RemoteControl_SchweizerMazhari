@@ -12,7 +12,7 @@ public class Plane implements Movable{
 			isRunning = true;
 		}
 		else {
-			System.out.println("Flugzeug wurde bereits gestartet\n");
+			System.out.println("Flugzeug wurde bereits gestartet.\n");
 		}
 	}
 
