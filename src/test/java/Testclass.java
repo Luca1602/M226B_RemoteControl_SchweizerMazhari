@@ -6,7 +6,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.Mockito;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import java.rmi.Remote;
@@ -16,7 +17,7 @@ public class Testclass {
 
     //Creating "Fake" plane to test RemoteControl
     @Mock
-    private Plane mockPlane;
+    Plane mockPlane = mock(Plane.class);
 
     @Test
     public void testRemoteControl(){
