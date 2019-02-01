@@ -16,7 +16,6 @@ import java.rmi.Remote;
 public class Testclass {
 
     //Creating "Fake" plane to test RemoteControl
-
     @Mock
     Plane mockPlane = mock(Plane.class);
 
