@@ -16,6 +16,7 @@ import java.rmi.Remote;
 public class Testclass {
 
     //Creating "Fake" plane to test RemoteControl
+
     @Mock
     Plane mockPlane = mock(Plane.class);
 
@@ -43,3 +44,5 @@ public class Testclass {
         Assert.assertEquals(90d, plane.fuelRemaining(), 0d);
     }
 }
+
+
